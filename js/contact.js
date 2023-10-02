@@ -11,7 +11,7 @@ function handleSubmit(e) {
 
   for (const property in data) {
     if (data[property] == '') {
-      alert('Form must be filled');
+      alert(`Form must be filled, ${property} is null `);
       return;
     }
   }

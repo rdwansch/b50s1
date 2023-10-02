@@ -34,7 +34,7 @@ function handleSubmit(e) {
 
   for (const property in project) {
     if (project[property].length < 1) {
-      alert('Form must be filled');
+      alert(`Form must be filled, ${property} is null`);
       return;
     }
   }
