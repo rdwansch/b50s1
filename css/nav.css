@@ -1,0 +1,70 @@
+* {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+nav {
+  background: #fff;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.nav__right {
+  background: #111727;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+.nav__right a {
+  color: white;
+}
+
+.nav--active {
+  position: relative;
+}
+
+.nav--active::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 80%;
+  background: linear-gradient(to right, #11172700, #111727, #11172700);
+
+  margin: auto;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms navAnimation;
+}
+
+@keyframes navAnimation {
+  from {
+    width: 0%;
+    background: linear-gradient(to right, #11172700, #111727, #11172700);
+  }
+  to {
+    width: 80%;
+    background: linear-gradient(to right, #11172700, #111727, #11172700);
+  }
+}

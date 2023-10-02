@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Site</title>
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script src="js/nav.js" defer></script>
+    <script src="js/contact.js"></script>
   </head>
   <body>
     <nav>
@@ -16,7 +18,7 @@
         <div class="nav__left">
           <img src="./images/logo.png" alt="Logo" />
           <a href="index.html">Home</a>
-          <a href="#">My Project</a>
+          <a href="project.html">My Project</a>
         </div>
 
         <div class="nav__right">
@@ -25,36 +27,39 @@
       </div>
     </nav>
 
-    <div>
-      <h2>GET IN TOUCH</h2>
-      <form>
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your Name." />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.co" />
-        </div>
-        <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="+62" />
-        </div>
-        <div>
-          <label for="subject">Subject</label>
-          <select id="subject">
-            <option value="" hidden>Select</option>
-            <option>Greeting</option>
-            <option>Ask</option>
-            <option>Opportunity</option>
-          </select>
-        </div>
-        <div>
-          <label for="message">Your Message</label>
-          <textarea id="message" placeholder="Your Message" rows="5"></textarea>
-        </div>
-        <button>Submit</button>
-      </form>
+    <div id="content-container">
+      <div>
+        <h2>GET IN TOUCH</h2>
+        <form onsubmit="handleSubmit(event)">
+          <div>
+            <label for="name">Name</label>
+            <input name="name" type="text" id="name" placeholder="Your Name." />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email" placeholder="your@email.co" />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input name="phone-number" type="tel" id="phone" placeholder="+62" />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <select name="subject" id="subject">
+              <option value="" hidden>Select</option>
+              <option value="greeting">Greeting</option>
+              <option value="ask">Ask</option>
+              <option value="opportunity">Opportunity</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" placeholder="Your Message" rows="5"></textarea>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
+      <!-- LAST -->
     </div>
   </body>
 </html>
