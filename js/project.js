@@ -79,10 +79,11 @@ function renderHTML() {
 
 function countTime(startDate, endDate) {
   const diff = new Date(endDate) - new Date(startDate);
-  let months = new Date(diff).getMonth();
-  let date = new Date(diff).getDate();
+  const months = new Date(diff).getMonth();
+  const date = new Date(diff).getDate();
+  const years = new Date(endDate).getFullYear() - new Date(startDate).getFullYear();
 
-  return `${months > 0 ? months + ' months' : ''} ${date} days`;
+  return `${years > 0 ? years + ' years' : ''} ${months > 0 ? months + ' months' : ''} ${date} days`;
 }
 
 function handleDelete(idx) {
