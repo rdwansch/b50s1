@@ -74,9 +74,8 @@ nav {
 .nav__mobile {
   position: fixed;
   width: 100%;
-  background: #fff;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-
+  display: none;
   z-index: 1;
 }
 
@@ -175,6 +174,10 @@ nav {
 @media (max-width: 576px) {
   .nav__desktop {
     display: none;
+  }
+
+  .nav__mobile {
+    display: block;
   }
   .nav__mobile > div {
     display: flex;
