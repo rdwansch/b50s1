@@ -14,21 +14,39 @@
   </head>
   <body>
     <nav>
-      <div>
+      <div class="nav__desktop">
         <div class="nav__left">
           <img src="./images/logo.png" alt="Logo" />
           <a href="index.html">Home</a>
           <a href="project.html">My Project</a>
         </div>
 
-        <div class="nav__right">
-          <a href="#" class="nav--active">Contact Me</a>
+        <div class="nav__contact">
+          <a href="#">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="nav__mobile">
+        <input type="checkbox" />
+
+        <div class="nav__hamburger">
+          <img src="./images/logo.png" alt="Logo" />
+          <div class="hamburger__wrapper" id="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="index.html">Home</a>
+          <a href="project.html">My Project</a>
+          <a href="#" class="nav__contact">Contact</a>
         </div>
       </div>
     </nav>
 
     <div id="content-container">
-      <div>
+      <div style="padding: 20px">
         <h2>GET IN TOUCH</h2>
         <form onsubmit="handleSubmit(event)">
           <div>
