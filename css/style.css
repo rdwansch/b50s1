@@ -153,3 +153,9 @@ body {
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 576px) {
+  .card {
+    margin-top: 100px;
+  }
+}
