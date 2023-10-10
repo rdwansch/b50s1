@@ -61,7 +61,7 @@ const renderHTML = data => {
     htmlContent = data.map(testimonial => /*html*/ `
 		<div class="card">
 <img src="${testimonial.image}" alt="Person" />
-<q>${testimonial.quote}</q>
+<q>${testimonial.comment}</q>
 <h5>- ${testimonial.name}</h5>
 <p>${testimonial.rating  }&#9733;</p>
 		</div>`
