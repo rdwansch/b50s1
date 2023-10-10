@@ -1,0 +1,78 @@
+{{#> header }}
+Project
+{{/header}}
+
+<body class="font-[Poppins] overflow-y-hidden bg-secondary h-screen">
+  {{> nav }}
+
+  <div id="content-container" class="px-5 md:pt-24 pt-40">
+    <h2 class="text-3xl text-center font-semibold">Add My Project</h2>
+    <form method="POST" class="max-w-xl mx-auto">
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="project-name">Project Name</label>
+        <input class="base-input" name="project-name" type="text" id="project-name" />
+      </div>
+      <div class="flex flex-row mt-4 gap-5">
+        <div class="flex w-full flex-col">
+          <label class="base-label" for="start-date">Start Date</label>
+          <input class="base-input text-[12px] sm:text-base" name="start-date" type="date" id="start-date" />
+        </div>
+        <div class="flex w-full flex-col">
+          <label class="base-label" for="end-date">End Date</label>
+          <input class="base-input text-[12px] sm:text-base" name="end-date" type="date" id="end-date" />
+        </div>
+      </div>
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="description">Description</label>
+        <textarea class="base-input" name="description" id="description" placeholder="" rows="5"></textarea>
+      </div>
+      <div class="flex flex-col mt-4">
+        <label class="base-label">Technologies</label>
+        <div class="flex gap-24">
+          <div class="flex flex-col gap-3">
+            <div>
+              <input class="base-input" name="node-checkbox" type="checkbox" id="node-checkbox" />
+              <label class="base-label" for="node-checkbox">Node JS</label>
+            </div>
+            <div>
+              <input class="base-input" name="react-checkbox" type="checkbox" id="react-checkbox" />
+              <label class="base-label" for="react-checkbox">React</label>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div>
+              <input class="base-input" name="nextjs-checkbox" type="checkbox" id="nextjs-checkbox" />
+              <label class="base-label" for="nextjs-checkbox">Next JS</label>
+            </div>
+            <div>
+              <input class="base-input" name="typescript-checkbox" type="checkbox" id="typescript-checkbox" />
+              <label class="base-label" for="typescript-checkbox">TypeScript</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="upload-image">Upload Image</label>
+        <label class="base-label" for="upload-image">
+          <div class="bg-white rounded-lg flex items-center justify-between">
+            <span
+              class="bg-[#e4e4e4] font-normal text-base text-gray-600 p-1.5 border border-gray-500 rounded-lg">Chooese</span>
+            <p class="image__name"></p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-paperclip rotate-45 h-5 w-5 mr-2"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+            </svg>
+          </div>
+        </label>
+        <input class="base-input hidden" name="upload-image" type="file" id="upload-image" hidden />
+      </div>
+
+      <button class="block ml-auto mt-5 bg-primary px-4 py-1 text-white rounded-lg">Submit</button>
+    </form>
+
+  </div>
+</body>
+
+</html>

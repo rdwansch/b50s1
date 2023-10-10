@@ -1,0 +1,5 @@
+{
+  "events": {
+    "start": "clear && npx tailwindcss -i ./src/style/globals.css -o ./public/assets/css/style.css --minify"
+  }
+}

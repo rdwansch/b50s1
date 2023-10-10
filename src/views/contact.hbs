@@ -1,0 +1,44 @@
+{{#> header }}
+Contact
+{{/header }}
+
+<body class="font-[Poppins] bg-secondary">
+  {{> nav }}
+
+  <div id="content-container" class="px-5 md:pt-24 pt-40">
+    <h2 class="text-3xl text-center font-semibold">Get In Touch</h2>
+    <form class="max-w-xl mx-auto">
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="name"> Name</label>
+        <input class="base-input" name="name" type="text" id="name" />
+      </div>
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="email">Email</label>
+        <input class="base-input" name="email" type="email" id="email" />
+      </div>
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="phone">Phone Number</label>
+        <input class="base-input" name="phone" type="email" id="phone" />
+      </div>
+
+
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="subject">Subject</label>
+        <select name='subject' id='subject' class="base-input bg-white">
+          <option value='' hidden>Select</option>
+          <option value='greeting'>Greeting</option>
+          <option value='ask'>Ask</option>
+          <option value='opportunity'>Opportunity</option>
+        </select>
+      </div>
+      <div class="flex flex-col mt-4">
+        <label class="base-label" for="description">Message</label>
+        <textarea class="base-input" name="description" id="description" placeholder="" rows="5"></textarea>
+      </div>
+      <button class="block ml-auto mt-5 bg-primary px-4 py-1 text-white rounded-lg">Submit</button>
+
+    </form>
+  </div>
+</body>
+
+</html>
