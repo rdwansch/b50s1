@@ -1,44 +1,52 @@
-<nav>
-  <div class='nav__desktop'>
-    <div class='nav__left'>
-      <img src='./images/logo.png' alt='Logo' />
-      <a href='/'>Home</a>
-      <a href='/project'>My Project</a>
+<nav class="bg-white shadow-md ">
+  <div class='hidden sm:flex items-center justify-between max-w-screen-2xl mx-auto py-3 px-5'>
+    <div class='flex items-center gap-5'>
+      <img src='/images/logo.png' alt='Logo' />
+      <a class="__a" href='/'>Home</a>
+      <a class="__a" href='/project'>My Project</a>
       {{!-- <a href='/testimonial'>Testimonials</a> --}}
     </div>
 
-    <div class='nav__contact'>
-      <a href='/contact'>Contact Me</a>
+    <div class='bg-primary text-white rounded-lg py-1 px-4'>
+      <a class="px-2 py-0.5 bg-primary rounded-full text-white" href='/contact'>Contact Me</a>
     </div>
   </div>
 
-  <div class='nav__mobile'>
-    <input type='checkbox' />
+  <div class='fixed sm:hidden  w-full bg-white shadow-md h-14'>
+    <input type='checkbox' class="hamburger-box" />
+    <div class="py-3 px-5">
 
-    <div class='nav__hamburger'>
-      <a href='/'>
-        <img src='./images/logo.png' alt='Logo' />
-      </a>
-      <div class='hamburger__wrapper' id='nav-hamburger'>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class='flex items-center justify-between'>
+        <a href='/' class="z-50">
+          <img src='/images/logo.png' alt='Logo' />
+        </a>
+        <div class='flex flex-col gap-[3px]'>
+          <span class="hamburger-line z-40 transition-all duration-500 bg-primary rounded-full bg-opacity-8 h-1 w-10"></span>
+          <span
+            class="hamburger-line z-40 transition-all duration-700 bg-primary rounded-full bg-opacity-8 h-1 w-7 ml-auto"></span>
+          <span class="hamburger-line z-40 transition-all duration-300 bg-primary rounded-full bg-opacity-8 h-1 w-10"></span>
+        </div>
       </div>
     </div>
-    <div class='nav__item'>
-      <a href='/'>Home</a>
-      <a href='/project'>My Project</a>
-      {{!-- <a href='/testimonial'>Testimonials</a> --}}
-      <a href='/contact' class='nav__contact'>Contact</a>
+
+    <div
+      class='hamburger-dropdown z-40 transition-all duration-700 flex flex-col gap-7 items-center -mt-1 -translate-y-72 bg-white w-full py-10'>
+      <a class="__a" href='/'>Home</a>
+      <a class="__a" href='/project'>My Project</a>
+      <a class="__a" href='/testimonial'>Testimonials</a>
+      <a class="__a px-6 py-0.5 bg-primary rounded-full text-white" href='/contact'>Contact</a>
     </div>
   </div>
 </nav>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav a')
+    const links = document.querySelectorAll('nav .__a')
     links.forEach(item => {
-      if (window.location.pathname == item.getAttribute('href')) {
+      const paths = item.getAttribute('href').split('/')[1] || "home"
+      const currentPage = window.location.pathname.split('/')[1] || "home"
+
+      if (paths.includes(currentPage)) {
         item.classList.add('nav--active')
       } else {
         item.classList.remove('nav--active')

@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/detail-project.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/nextjs-checkbox.png" type="image/x-icon" />
-    <script src="./js/nav.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__desktop">
-        <div class="nav__left">
-          <img src="./images/logo.png" alt="Logo" />
-          <a href="index.html">Home</a>
-          <a href="#" class="nav--active">My Project</a>
-          <a href="testimonials.html">Testimonials</a>
-        </div>
 
-        <div class="nav__contact">
-          <a href="contact.html">Contact Me</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/detail-project.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="images/nextjs-checkbox.png" type="image/x-icon" />
+  <script src="./js/nav.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__desktop">
+      <div class="nav__left">
+        <img src="./images/logo.png" alt="Logo" />
+        <a href="index.html">Home</a>
+        <a href="#" class="nav--active">My Project</a>
+        <a href="testimonials.html">Testimonials</a>
       </div>
 
-      <div class="nav__mobile">
-        <input type="checkbox" />
-
-        <div class="nav__hamburger">
-          <a href="index.html">
-            <img src="./images/logo.png" alt="Logo" />
-          </a>
-          <div class="hamburger__wrapper" id="nav-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="nav__item">
-          <a href="index.html">Home</a>
-          <a href="#" class="nav--active">My Project</a>
-          <a href="testimonials.html">Testimonials</a>
-          <a href="contact.html" class="nav__contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <div id="content-container" class="content__container">
-      <h1>Dumbways APP</h1>
-
-      <div class="hero">
-        <img src="images/IMG_20221218_054353.jpg" alt="Image" class="hero__image" />
-        <div>
-          <div class="project__duration">
-            <h3>Duration</h3>
-            <div class="flex-gap">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-calendar3"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"
-                />
-                <path
-                  d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                />
-              </svg>
-              <span>12 Jan 2021 - 11 Feb 2021</span>
-            </div>
-            <div class="flex-gap">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-clock"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-              </svg>
-              <span>1 month</span>
-            </div>
-          </div>
-
-          <div class="project__technologies">
-            <h3>Technologies</h3>
-            <div>
-              <div class="flex-gap">
-                <img src="./images/react-checkbox.png" alt="React" />
-                <span>React JS</span>
-              </div>
-
-              <div class="flex-gap">
-                <img src="./images/node-checkbox.png" alt="Node" />
-                <span>Node JS</span>
-              </div>
-              <div class="flex-gap">
-                <img src="./images/nextjs-checkbox.png" alt="Next" />
-                <span>Next JS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores maiores voluptatem ab quas magni eaque
-        quaerat doloribus perspiciatis quibusdam tenetur, iste dicta doloremque voluptate, quasi non dolorem. Eveniet,
-        laboriosam doloribus! Modi corporis, optio et voluptatum alias ad totam natus sint unde, labore, veniam deleniti
-        harum error eaque maxime. Sunt, exercitationem dicta autem porro beatae labore quaerat accusamus consequuntur odit
-        sapiente ducimus voluptatum eligendi voluptates magnam praesentium veniam error aperiam dignissimos distinctio alias
-        voluptatem vero! Dolores pariatur distinctio facere quisquam labore, ut doloremque laborum est provident eos vel
-        sapiente illo suscipit soluta dolor dignissimos corporis dicta esse alias molestiae tempora quos atque. Adipisci id,
-        hic placeat ipsam tempora, laudantium aut possimus animi harum, aspernatur voluptate eos architecto inventore totam
-        quasi dolores corrupti maiores similique! Voluptatem earum beatae molestiae reiciendis magni blanditiis eos enim
-        officia, nam ducimus omnis, perspiciatis animi voluptas. Tenetur explicabo, similique fugiat harum beatae architecto
-        unde eveniet. Impedit animi unde architecto laboriosam obcaecati tempore aut accusantium dolor dolores ex molestias
-        repellat dicta ullam laborum perferendis a expedita sed, maxime voluptate assumenda nobis exercitationem iste hic!
-        Voluptates amet voluptatum tempora accusamus et atque, non qui fuga vel nam, impedit eaque veritatis ex quisquam quo
-        velit. Consequuntur consectetur molestias maiores ipsam molestiae repudiandae quaerat dolorem distinctio mollitia
-        porro voluptatum harum, repellendus corrupti minima quis quam. Magni eum cum doloremque adipisci velit dolorum alias?
-        Sunt, consequatur suscipit! Sint autem nesciunt quidem! Cumque eos et doloremque molestiae aut corporis impedit
-        magnam voluptatum accusamus fugiat, id delectus veniam cum dolorum commodi. Provident dolor unde nam officiis ex
-        earum cumque numquam asperiores veritatis vero corporis corrupti, inventore omnis minus doloremque, possimus ipsum
-        ipsam aperiam modi ratione sint doloribus laboriosam voluptatem! Veniam excepturi corrupti accusantium magnam debitis
-        aliquam eum quos explicabo fugit optio consequuntur, ullam tempore impedit porro animi, minima aspernatur nostrum
-        odit. Blanditiis obcaecati nihil quaerat ipsum velit exercitationem, perspiciatis soluta, accusamus tempore, commodi
-        voluptate? Aliquam, similique inventore! Delectus vero vitae eius natus. Voluptatum, nihil ducimus explicabo, at
-        ullam ipsum itaque nostrum illum atque nam fugiat quisquam deleniti accusantium fuga quaerat, quia vitae reiciendis
-        numquam et magni in esse mollitia debitis assumenda! Libero, inventore? Earum perspiciatis aperiam voluptatem, quasi
-        suscipit doloremque sit necessitatibus sunt, quos excepturi accusamus, iusto vel. Recusandae sequi illo iure! Ipsum
-        quisquam expedita sit voluptates quidem fuga nihil! Tempora quod veniam tempore, reprehenderit deserunt porro
-        quisquam. Id neque architecto corrupti! Assumenda placeat, quibusdam id quis natus atque laudantium, impedit, maiores
-        corrupti explicabo iusto similique vitae odit. Molestiae quasi ducimus esse, molestias dolores, perspiciatis
-        suscipit, eligendi eius beatae consequuntur itaque? Ut itaque doloribus earum officiis voluptas? Voluptas at nisi
-        laborum modi rerum tempora non aliquam quasi nobis adipisci magni voluptatum ut veniam enim praesentium, doloremque
-        quisquam possimus commodi recusandae vel eos explicabo illum accusantium! Doloribus nisi similique, magni dolorum
-        vero soluta consequuntur non, architecto quidem ea eligendi voluptatem quam officia molestiae. Molestias mollitia,
-        rerum amet nobis corrupti adipisci delectus fugit consectetur impedit reiciendis cumque sequi consequuntur totam
-        consequatur eum id aut. Aut tempore earum, sint accusantium enim in! Nobis, hic? Eos, magnam!
+      <div class="nav__contact">
+        <a href="contact.html">Contact Me</a>
       </div>
     </div>
-  </body>
-</html>
+
+    <div class="nav__mobile">
+      <input type="checkbox" />
+
+      <div class="nav__hamburger">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="Logo" />
+        </a>
+        <div class="hamburger__wrapper" id="nav-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="index.html">Home</a>
+        <a href="#" class="nav--active">My Project</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="nav__contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content-container" class="content__container">
+    <h1>Dumbways APP</h1>
+
+    <div class="hero">
+      <img src="images/IMG_20221218_054353.jpg" alt="Image" class="hero__image" />
+      <div>
+        <div class="project__duration">
+          <h3>Duration</h3>
+          <div class="flex-gap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3"
+              viewBox="0 0 16 16">
+              <path
+                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+              <path
+                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <span>12 Jan 2021 - 11 Feb 2021</span>
+          </div>
+          <div class="flex-gap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+              viewBox="0 0 16 16">
+              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+            </svg>
+            <span>1 month</span>
+          </div>
+        </div>
+
+        <div class="project__technologies">
+          <h3>Technologies</h3>
+          <div>
+            <div class="flex-gap">
+              <img src="./images/react-checkbox.png" alt="React" />
+              <span>React JS</span>
+            </div>
+
+            <div class="flex-gap">
+              <img src="./images/node-checkbox.png" alt="Node" />
+              <span>Node JS</span>
+            </div>
+            <div class="flex-gap">
+              <img src="./images/nextjs-checkbox.png" alt="Next" />
+              <span>Next JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project__description">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores maiores voluptatem ab quas magni eaque
+      quaerat doloribus perspiciatis quibusdam tenetur, iste dicta doloremque voluptate, quasi non dolorem. Eveniet,
+      laboriosam doloribus! Modi corporis, optio et voluptatum alias ad totam natus sint unde, labore, veniam deleniti
+      harum error eaque maxime. Sunt, exercitationem dicta autem porro beatae labore quaerat accusamus consequuntur odit
+      sapiente ducimus voluptatum eligendi voluptates magnam praesentium veniam error aperiam dignissimos distinctio alias
+      voluptatem vero! Dolores pariatur distinctio facere quisquam labore, ut doloremque laborum est provident eos vel
+      sapiente illo suscipit soluta dolor dignissimos corporis dicta esse alias molestiae tempora quos atque. Adipisci id,
+      hic placeat ipsam tempora, laudantium aut possimus animi harum, aspernatur voluptate eos architecto inventore totam
+      quasi dolores corrupti maiores similique! Voluptatem earum beatae molestiae reiciendis magni blanditiis eos enim
+      officia, nam ducimus omnis, perspiciatis animi voluptas. Tenetur explicabo, similique fugiat harum beatae architecto
+      unde eveniet. Impedit animi unde architecto laboriosam obcaecati tempore aut accusantium dolor dolores ex molestias
+      repellat dicta ullam laborum perferendis a expedita sed, maxime voluptate assumenda nobis exercitationem iste hic!
+      Voluptates amet voluptatum tempora accusamus et atque, non qui fuga vel nam, impedit eaque veritatis ex quisquam quo
+      velit. Consequuntur consectetur molestias maiores ipsam molestiae repudiandae quaerat dolorem distinctio mollitia
+      porro voluptatum harum, repellendus corrupti minima quis quam. Magni eum cum doloremque adipisci velit dolorum alias?
+      Sunt, consequatur suscipit! Sint autem nesciunt quidem! Cumque eos et doloremque molestiae aut corporis impedit
+      magnam voluptatum accusamus fugiat, id delectus veniam cum dolorum commodi. Provident dolor unde nam officiis ex
+      earum cumque numquam asperiores veritatis vero corporis corrupti, inventore omnis minus doloremque, possimus ipsum
+      ipsam aperiam modi ratione sint doloribus laboriosam voluptatem! Veniam excepturi corrupti accusantium magnam debitis
+      aliquam eum quos explicabo fugit optio consequuntur, ullam tempore impedit porro animi, minima aspernatur nostrum
+      odit. Blanditiis obcaecati nihil quaerat ipsum velit exercitationem, perspiciatis soluta, accusamus tempore, commodi
+      voluptate? Aliquam, similique inventore! Delectus vero vitae eius natus. Voluptatum, nihil ducimus explicabo, at
+      ullam ipsum itaque nostrum illum atque nam fugiat quisquam deleniti accusantium fuga quaerat, quia vitae reiciendis
+      numquam et magni in esse mollitia debitis assumenda! Libero, inventore? Earum perspiciatis aperiam voluptatem, quasi
+      suscipit doloremque sit necessitatibus sunt, quos excepturi accusamus, iusto vel. Recusandae sequi illo iure! Ipsum
+      quisquam expedita sit voluptates quidem fuga nihil! Tempora quod veniam tempore, reprehenderit deserunt porro
+      quisquam. Id neque architecto corrupti! Assumenda placeat, quibusdam id quis natus atque laudantium, impedit, maiores
+      corrupti explicabo iusto similique vitae odit. Molestiae quasi ducimus esse, molestias dolores, perspiciatis
+      suscipit, eligendi eius beatae consequuntur itaque? Ut itaque doloribus earum officiis voluptas? Voluptas at nisi
+      laborum modi rerum tempora non aliquam quasi nobis adipisci magni voluptatum ut veniam enim praesentium, doloremque
+      quisquam possimus commodi recusandae vel eos explicabo illum accusantium! Doloribus nisi similique, magni dolorum
+      vero soluta consequuntur non, architecto quidem ea eligendi voluptatem quam officia molestiae. Molestias mollitia,
+      rerum amet nobis corrupti adipisci delectus fugit consectetur impedit reiciendis cumque sequi consequuntur totam
+      consequatur eum id aut. Aut tempore earum, sint accusantium enim in! Nobis, hic? Eos, magnam!
+    </div>
+  </div>
+</body>

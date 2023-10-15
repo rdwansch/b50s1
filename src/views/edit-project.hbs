@@ -5,47 +5,53 @@ Project
 <body class="font-[Poppins] overflow-y-hidden bg-secondary h-screen">
   {{> nav }}
 
-  <div id="content-container" class="px-5 sm:pt-24 pt-40">
-    <h2 class="text-3xl text-center font-semibold">Add My Project</h2>
+  <div id="content-container" class="px-5 md:pt-24 pt-40">
+    <h2 class="text-3xl text-center font-semibold">Edit Project</h2>
     <form method="POST" class="max-w-xl mx-auto">
       <div class="flex flex-col mt-4">
         <label class="base-label" for="name">Project Name</label>
-        <input class="base-input" name="name" type="text" id="name" />
+        <input class="base-input" name="name" type="text" id="name" value="{{ project.name }}" />
       </div>
       <div class="flex flex-row mt-4 gap-5">
         <div class="flex w-full flex-col">
           <label class="base-label" for="startDate">Start Date</label>
-          <input class="base-input text-[12px] sm:text-base" name="startDate" type="date" id="startDate" />
+          <input class="base-input text-[12px] sm:text-base" name="startDate" type="date" id="startDate"
+            value="{{ project.startDate }}" />
         </div>
         <div class="flex w-full flex-col">
           <label class="base-label" for="endDate">End Date</label>
-          <input class="base-input text-[12px] sm:text-base" name="endDate" type="date" id="endDate" />
+          <input class="base-input text-[12px] sm:text-base" name="endDate" type="date" id="endDate"
+            value="{{ project.endDate }}" />
         </div>
       </div>
       <div class="flex flex-col mt-4">
         <label class="base-label" for="description">Description</label>
-        <textarea class="base-input" name="description" id="description" placeholder="" rows="5"></textarea>
+        <textarea class="base-input" name="description" id="description" rows="5">{{ project.description }}</textarea>
       </div>
       <div class="flex flex-col mt-4">
         <label class="base-label">Technologies</label>
         <div class="flex gap-24">
           <div class="flex flex-col gap-3">
             <div>
-              <input class="base-input" name="technologies" value="node" type="checkbox" id="node-checkbox" />
+              <input class="base-input" name="technologies" value="node" type="checkbox" id="node-checkbox" {{#if
+                (includes 'node' project.technologies)}} checked {{/if }} />
               <label class="base-label" for="node-checkbox">Node JS</label>
             </div>
             <div>
-              <input class="base-input" name="technologies" value="react" type="checkbox" id="react-checkbox" />
+              <input class="base-input" name="technologies" value="react" type="checkbox" id="react-checkbox" {{#if
+                (includes 'react' project.technologies)}} checked {{/if }} />
               <label class="base-label" for="react-checkbox">React</label>
             </div>
           </div>
           <div class="flex flex-col gap-3">
             <div>
-              <input class="base-input" name="technologies" value="nextjs" type="checkbox" id="nextjs-checkbox" />
+              <input class="base-input" name="technologies" value="nextjs" type="checkbox" id="nextjs-checkbox" {{#if
+                (includes 'nextjs' project.technologies)}} checked {{/if }} />
               <label class="base-label" for="nextjs-checkbox">Next JS</label>
             </div>
             <div>
-              <input class="base-input" name="technologies" value="typescript" type="checkbox" id="typescript-checkbox" />
+              <input class="base-input" name="technologies" value="typescript" type="checkbox" id="typescript-checkbox" {{#if
+                (includes 'typescript' project.technologies)}} checked {{/if }} />
               <label class="base-label" for="typescript-checkbox">TypeScript</label>
             </div>
           </div>
@@ -72,7 +78,7 @@ Project
       <button class="block ml-auto mt-5 bg-primary px-4 py-1 text-white rounded-lg">Submit</button>
     </form>
 
+    {{!-- {{ project.technologies }} --}}
+
   </div>
-
-
 </body>
