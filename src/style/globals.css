@@ -5,7 +5,7 @@
 @layer components {
   .base-input {
     @apply outline-none p-3 resize-none border border-white
-    text-primary text-base font-[Poppins] transition rounded-lg
+    text-primary text-base font-[Poppins] transition 
     focus:shadow focus:border-gray-300;
   }
 
@@ -17,27 +17,59 @@
     @apply absolute right-4 top-1 w-12 h-12 opacity-0 z-50 cursor-pointer;
   }
 
-  .hamburger-box:checked ~ div div span.hamburger-line:nth-child(1) {
-    @apply rotate-[135deg] -translate-x-0.5 translate-y-1;
+  .hamburger-box:checked ~ div span.hamburger-line:nth-child(1) {
+    @apply rotate-[135deg] -translate-x-0.5 translate-y-1 bg-secondary bg-opacity-80;
   }
 
-  .hamburger-box:checked ~ div div span.hamburger-line:nth-child(2) {
-    @apply -rotate-180 opacity-0 -translate-x-2 -translate-y-1;
+  .hamburger-box:checked ~ div span.hamburger-line:nth-child(2) {
+    @apply -rotate-180 opacity-0 -translate-x-2 -translate-y-1 bg-secondary bg-opacity-80;
   }
 
-  .hamburger-box:checked ~ div div span.hamburger-line:nth-child(3) {
-    @apply -rotate-[135deg] -translate-x-0.5 -translate-y-3;
+  .hamburger-box:checked ~ div span.hamburger-line:nth-child(3) {
+    @apply -rotate-[135deg] -translate-x-0.5 -translate-y-3 bg-secondary bg-opacity-80;
   }
 
   .hamburger-box:checked ~ .hamburger-dropdown {
-    @apply translate-y-0 shadow-lg;
+    @apply -translate-y-20 shadow-lg;
   }
 
-  .nav--active {
+  /* .nav--active {
     @apply relative;
   }
 
   .nav--active::after {
     @apply content-[''] absolute h-[2px] w-4/5 bg-gradient-to-r from-[#11172700] via-primary to-[#11172700] mx-auto left-0 right-0 bottom-0 rounded-full animate-pulse;
+  } */
+
+  .nav--active {
+    @apply relative text-black;
+  }
+
+  .nav--active::after {
+    @apply content-[''] absolute h-[2px] w-3 bg-primary left-0  bottom-0 rounded-full;
+  }
+
+  .nav--active.__m {
+    @apply relative text-white font-semibold;
+  }
+
+  .nav--active.__m::after {
+    @apply content-[''] absolute h-[2px] w-3 bg-secondary left-0  bottom-0 rounded-full;
+  }
+
+  .fe-tagline {
+    @apply relative z-10;
+  }
+
+  .fe-tagline::after {
+    @apply content-[''] opacity-70 absolute -z-10 -left-3 bottom-0 right-0 top-0 w-full h-5 bg-gradient-to-r from-orange-300 via-orange-200 to-secondary font-semibold;
+  }
+
+  .section-tagline {
+    @apply relative;
+  }
+
+  .section-tagline::after {
+    @apply content-[''] absolute -right-5 top-0 w-16 h-7 bg-gradient-to-l from-orange-300 via-orange-200 to-[#fb923c00] opacity-70;
   }
 }

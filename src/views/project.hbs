@@ -2,76 +2,100 @@
 Project
 {{/header}}
 
-<body class="font-[Poppins] overflow-y-hidden bg-secondary h-screen">
+<body class="font-[Bai Jamjuree] bg-secondary h-screen">
   {{> nav }}
 
-  <div id="content-container" class="px-5 sm:pt-24 pt-40">
-    <h2 class="text-3xl text-center font-semibold">Add My Project</h2>
-    <form method="POST" class="max-w-xl mx-auto">
-      <div class="flex flex-col mt-4">
-        <label class="base-label" for="name">Project Name</label>
-        <input class="base-input" name="name" type="text" id="name" />
-      </div>
-      <div class="flex flex-row mt-4 gap-5">
-        <div class="flex w-full flex-col">
-          <label class="base-label" for="startDate">Start Date</label>
-          <input class="base-input text-[12px] sm:text-base" name="startDate" type="date" id="startDate" />
-        </div>
-        <div class="flex w-full flex-col">
-          <label class="base-label" for="endDate">End Date</label>
-          <input class="base-input text-[12px] sm:text-base" name="endDate" type="date" id="endDate" />
-        </div>
-      </div>
-      <div class="flex flex-col mt-4">
-        <label class="base-label" for="description">Description</label>
-        <textarea class="base-input" name="description" id="description" placeholder="" rows="5"></textarea>
-      </div>
-      <div class="flex flex-col mt-4">
-        <label class="base-label">Technologies</label>
-        <div class="flex gap-24">
-          <div class="flex flex-col gap-3">
-            <div>
-              <input class="base-input" name="technologies" value="node" type="checkbox" id="node-checkbox" />
-              <label class="base-label" for="node-checkbox">Node JS</label>
+  <div id="content-container" class="px-5 sm:pt-16 pt-32 pb-20 ">
+    <div class="border-r-2 border-b-2 border-primary max-w-xl mx-auto relative bg-secondary">
+      {{!-- <div class=" border border-primary w-full h-5 flex items-center justify-end gap-3 pr-5 py-5">
+        <span class="h-4 w-4 rounded-full bg-red-500"></span>
+        <span class="h-4 w-4 rounded-full bg-yellow-500"></span>
+        <span class="h-4 w-4 rounded-full bg-green-500"></span>
+      </div> --}}
+      {{!-- <div class="content-[''] absolute -right-14 -bottom-14 w-full h-full border border-primary bg-[#eaeaea] -z-10">
+      </div> --}}
+
+      <div class="content-[''] absolute -right-10 -bottom-10 w-full h-full border border-primary bg-[#eaeaea] -z-10"> </div>
+      {{!-- <div class="content-[''] absolute -right-10 -bottom-10 w-full h-full border border-primary bg-[#eaeaea] -z-10">
+      </div> --}}
+      <div class="p-5">
+        <h2 class="mx-auto w-fit text-4xl font-semibold  relative ">Add My Project</h2>
+        <form method="POST">
+          <div class="flex flex-col mt-4">
+            <label class="base-label" for="name">Project Name</label>
+            <input class="base-input border border-secondary focus:border-primary" name="name" type="text" id="name" />
+          </div>
+          <div class="flex flex-row mt-4 gap-5">
+            <div class="flex w-full flex-col">
+              <label class="base-label" for="startDate">Start Date</label>
+              <input class="base-input border-secondary focus:border-primary text-[12px] sm:text-base" name="startDate"
+                type="date" id="startDate" />
             </div>
-            <div>
-              <input class="base-input" name="technologies" value="react" type="checkbox" id="react-checkbox" />
-              <label class="base-label" for="react-checkbox">React</label>
+            <div class="flex w-full flex-col">
+              <label class="base-label" for="endDate">End Date</label>
+              <input class="base-input border-secondary focus:border-primary text-[12px] sm:text-base" name="endDate"
+                type="date" id="endDate" />
             </div>
           </div>
-          <div class="flex flex-col gap-3">
-            <div>
-              <input class="base-input" name="technologies" value="nextjs" type="checkbox" id="nextjs-checkbox" />
-              <label class="base-label" for="nextjs-checkbox">Next JS</label>
-            </div>
-            <div>
-              <input class="base-input" name="technologies" value="typescript" type="checkbox" id="typescript-checkbox" />
-              <label class="base-label" for="typescript-checkbox">TypeScript</label>
+          <div class="flex flex-col mt-4">
+            <label class="base-label" for="description">Description</label>
+            <textarea class="base-input border-secondary focus:border-primary" name="description" id="description"
+              placeholder="" rows="5"></textarea>
+          </div>
+          <div class="flex flex-col mt-4">
+            <label class="base-label">Technologies</label>
+            <div class="flex gap-24">
+              <div class="flex flex-col gap-3">
+                <div>
+                  <input class="base-input border-secondary focus:border-primary" name="technologies" value="node"
+                    type="checkbox" id="node-checkbox" />
+                  <label class="base-label" for="node-checkbox">Node JS</label>
+                </div>
+                <div>
+                  <input class="base-input border-secondary focus:border-primary" name="technologies" value="react"
+                    type="checkbox" id="react-checkbox" />
+                  <label class="base-label" for="react-checkbox">React</label>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div>
+                  <input class="base-input border-secondary focus:border-primary" name="technologies" value="nextjs"
+                    type="checkbox" id="nextjs-checkbox" />
+                  <label class="base-label" for="nextjs-checkbox">Next JS</label>
+                </div>
+                <div>
+                  <input class="base-input border-secondary focus:border-primary" name="technologies" value="typescript"
+                    type="checkbox" id="typescript-checkbox" />
+                  <label class="base-label" for="typescript-checkbox">TypeScript</label>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="flex flex-col mt-4">
-        <label class="base-label" for="upload-image">Upload Image</label>
-        <label class="base-label" for="upload-image">
-          <div class="bg-white rounded-lg flex items-center justify-between">
-            <span
-              class="bg-[#e4e4e4] font-normal text-base text-gray-600 p-1.5 border border-gray-500 rounded-lg">Chooese</span>
-            <p class="image__name"></p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-paperclip rotate-45 h-5 w-5 mr-2"
-              viewBox="0 0 16 16">
-              <path
-                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
-            </svg>
+          <div class="flex flex-col mt-4">
+            <label class="base-label" for="upload-image">Upload Image</label>
+            <label class="base-label" for="upload-image">
+              <div
+                class="bg-white rounded-lg flex items-center justify-between base-input border-secondary focus:border-primary">
+                {{!-- <span
+                  class="bg-[#e4e4e4] font-normal text-base text-gray-600 p-1.5 border border-gray-500 rounded-lg">Chooese</span>
+                --}}
+                <p class="image__name"></p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-paperclip rotate-45 h-5 w-5 mr-2"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                </svg>
+              </div>
+            </label>
+            <input class="base-input border-secondary focus:border-primary hidden" name="image" type="file" id="upload-image"
+              hidden />
           </div>
-        </label>
-        <input class="base-input hidden" name="image" type="file" id="upload-image" hidden />
+          <button
+            class=" mt-5 border border-primary text-primary hover:text-white  hover:bg-primary px-4 py-1  rounded-lg">Submit</button>
+        </form>
       </div>
-
-      <button class="block ml-auto mt-5 bg-primary px-4 py-1 text-white rounded-lg">Submit</button>
-    </form>
-
+    </div>
   </div>
 
 
