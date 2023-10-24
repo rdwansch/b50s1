@@ -1,13 +1,22 @@
 {{#> header }}
-Project
+Edit Project
 {{/header}}
 
-<body class="font-[Poppins] overflow-y-hidden bg-secondary h-screen">
+<body class="font-[Bai Jamjuree] overflow-y-hidden bg-secondary h-screen">
   {{> nav }}
 
+
+
   <div id="content-container" class="px-5 md:pt-24 pt-40">
-    <h2 class="text-3xl text-center font-semibold">Edit Project</h2>
-    <form method="POST" class="max-w-xl mx-auto">
+    <h2 class="text-3xl text-center font-semibold">
+      {{#if isLogin }}
+      Edit Project
+      {{else }}
+      You Have to Log In
+      {{/if }}
+    </h2>
+    {{#if isLogin }}
+    <form method="POST" class="max-w-xl mx-auto" enctype="multipart/form-data">
       <div class="flex flex-col mt-4">
         <label class="base-label" for="name">Project Name</label>
         <input class="base-input" name="name" type="text" id="name" value="{{ project.name }}" />
@@ -16,12 +25,12 @@ Project
         <div class="flex w-full flex-col">
           <label class="base-label" for="startDate">Start Date</label>
           <input class="base-input text-[12px] sm:text-base" name="startDate" type="date" id="startDate"
-            value="{{ project.startDate }}" />
+            value="{{ project.startDate }}" style="z-index: 9999;" />
         </div>
         <div class="flex w-full flex-col">
           <label class="base-label" for="endDate">End Date</label>
           <input class="base-input text-[12px] sm:text-base" name="endDate" type="date" id="endDate"
-            value="{{ project.endDate }}" />
+            value="{{ project.endDate }}" style="z-index: 9999;" />
         </div>
       </div>
       <div class="flex flex-col mt-4">
@@ -77,6 +86,7 @@ Project
 
       <button class="block ml-auto mt-5 bg-primary px-4 py-1 text-white rounded-lg">Submit</button>
     </form>
+    {{/if }}
 
     {{!-- {{ project.technologies }} --}}
 

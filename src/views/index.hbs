@@ -6,8 +6,6 @@ Home
   {{> nav }}
 
   <div id='content-container' class="px-5 sm:pt-24 pt-40">
-    {{!-- --}}
-
     <section class="">
       <div
         class="flex flex-col justify-center lg:flex-row lg:justify-between gap-48 lg:gap-20 mx-auto mt-0 lg:mt-20 max-w-6xl relative">
@@ -23,8 +21,8 @@ Home
         </div>
         {{!-- --}}
         <svg id="curved"
-          class="stroke-primary absolute top-[500px] xs:top-[580px] lg:top-12 left-0 -right-10 lg:-right-20 mx-auto rotate-0 lg:rotate-[80deg] scale-105 lg:scale-150"
-          width="53" height="68" viewBox="0 0 53 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          class="stroke-primary w-[53px] transition absolute top-[500px] xs:top-[580px] lg:top-12 left-0 -right-10 lg:-right-20 mx-auto rotate-0 lg:rotate-[80deg] scale-105 lg:scale-150"
+          width="0" height="68" viewBox="0 0 53 68" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.00001 0.999988C6.91304 1.98551 26.6061 10.9359 27.0417 20.0833C27.223 23.8896 25.316 29.2172 22.1667 31.6666C15.4036 36.9267 4.17815 29.9088 13.5 23.5C18.7279 19.9058 26.1975 22.8211 31.4583 24.9583C38.5 28.5 38.5 28.5 43.3334 35.25C49 44.5 48.6119 57.8059 47.5 57.25"
             stroke-width="2" stroke-linecap="round" />
@@ -43,7 +41,8 @@ Home
 
         <div class="lg:w-[45%] -mt-32 lg:-mt-20">
           <div class="relative w-fit mx-auto xl:mx-auto">
-            <div class="relative w-[250px] h-[375px] xs:w-[300px] xs:h-[450px] z-10 bg-[#544332]">
+            <div
+              class="relative w-[250px] h-[375px] xs:w-[300px] xs:h-[450px] z-10 bg-[#544332] bg-[url('/images/me.jpg')] bg-cover bg-left-bottom  ">
             </div>
             <div
               class="absolute top-5 -right-5 xs:top-7 xs:-right-7 bg-secondary border-4 border-primary w-[250px] h-[375px] xs:w-[300px] xs:h-[450px]">
@@ -88,12 +87,16 @@ Home
       <div class='flex gap-12 justify-center mx-auto max-w-7xl flex-wrap mt-10'>
         {{#each projects}}
         <div class='mt-5 p-5 w-96 transition hover:shadow-lg'>
-          <div class='w-full h-48'></div>
+          {{!-- <div class='w-full h-48 bg-[url("/{{ this.image }}")] bg-cover'></div> --}}
+          <img src="/{{ this.image }}" alt="Project" class="w-full h-48">
           <div class='flex flex-col gap-5'>
             <div class="cursor-pointer">
 
-              <a href="">
-                <h4 class='text-xl'>{{ this.name }}</h4>
+              <a href="project/detail/{{ this.id }}">
+                <h4 class='text-xl'>
+                  {{ this.projectName }} |
+                  <span class="text-base text-red-500 font-semibold">{{ this.name }}</span>
+                </h4>
                 <p class='text-gray-500 text-sm'>durasi : {{countTime this.startDate this.endDate }}</p>
               </a>
             </div>
@@ -107,12 +110,14 @@ Home
               {{/each }}
             </div>
 
+            {{#if (compare this.authorId "==" ../userLoginId) }}
             <div class='flex flex-row gap-3 '>
-              <a href="/project/edit/{{@index  }}"
+              <a href="/project/edit/{{ this.id  }}"
                 class='transition border hover:bg-orange-500 hover:text-white text-primary w-full py-0.5 font-semibold lowercase text-center'>Edit</a>
-              <a href="/project/delete/{{@index  }}" onclick="return confirm('Are you sure to delete Project?')"
+              <a href="/project/delete/{{ this.id  }}" onclick="return confirm('Are you sure to delete Project?')"
                 class='transition border hover:bg-red-500 hover:text-white hover:border-red-700 border-primary text-primary w-full py-0.5 font-semibold lowercase text-center'>Delete</a>
             </div>
+            {{/if }}
           </div>
         </div>
         {{/each }}
